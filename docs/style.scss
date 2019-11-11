@@ -1,0 +1,250 @@
+/*Web fonts*/
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Cabin);
+
+/*General*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cabin, sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  --header-height: 2rem;
+  --accent-color: #CC3300;
+  --background-color: #131418;
+}
+
+.container {
+  width: 100%;
+  background: var(--container-background);
+}
+
+h1 {
+  margin: 0 0 0.5% 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2.4rem;
+}
+
+h2 {
+  margin: 2% 0 1% 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2.1rem;
+  text-align: center;
+}
+
+p {
+
+}
+
+a {
+  color: var(--background-color);
+}
+
+/*Customized links*/
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+a:active {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/*Nav links in a row*/
+ul {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+li {
+  padding: 0 2rem;
+}
+
+/*Header*/
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding-top: 6%;
+  background: #fff;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.logo {
+ position:inline-block;
+  margin: 0;
+  padding: 0;
+}
+#logoimg {
+  height: calc(4vw - 1vh);
+  max-width: 85%;
+}
+
+#logoimg:hover {
+  fill: var(--accent-color);
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0 2%;
+  padding-top: calc(6vmax + 1rem);
+}
+
+.nav li a {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
+/*Main Body*/
+.main {
+  display: flex;
+/*  width: 60%;*/
+  margin: 0 auto;
+  background: var(--main-background);
+  justify-content: space-around;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: center url("https://i.imgur.com/3igL5dI.jpg");
+}
+
+#welcome-section p {
+  color:var(--accent-color);
+}
+
+#projects {
+  padding: 0 0 10% 0;
+  background: var(--background-color);
+}
+#projects h2 {
+  color: #999;
+}
+#projects a {
+  color: #999;
+}
+#projects a:hover {
+  color: #fff;
+}
+#projects a:active {
+  color: #fff;
+}
+.project-tile {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  --imgwidth: 20vw;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: var(--imgwidth);
+  min-width: 400px;
+  margin: 2%;
+}
+.project-snapshot {
+  img {
+    width: var(--imgwidth);
+    min-width: 400px;
+  }
+}
+
+.contactinfo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin: 5% 0;
+}
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  height: 200px;
+}
+.contact-icon {
+  height: 100px;
+}
+
+.contact-icon:hover {
+  fill: var(--accent-color);
+}
+
+/*Footer*/
+.footer {
+  width: 100%;
+  padding: 1% 2rem;
+  background: #eee;
+}
+
+/*Responsive Formatting*/
+@media (max-width: 999px) {
+  * {
+    --header-height: calc(16vh - 1vw);
+  }
+  h2 {
+    margin: 15%;
+  }
+  .header {
+    position: fixed;
+    top: 0;
+    height: var(--header-height);
+    padding-top: var(--header-height);
+    text-align: center;
+  }
+  .logo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-height);
+    margin: 0 auto;
+    padding: 8% 0 0 0;
+  }
+  #logoimg {
+  height: var(--header-height);
+  }
+  .nav {
+    display: none;
+  }
+  .spacer {
+    margin: var(--header-height);
+  }
+  .main {
+    width: 100%;
+    flex-flow: row wrap;
+  }
+}
